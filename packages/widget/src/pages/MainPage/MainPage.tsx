@@ -23,7 +23,7 @@ export const MainPage: React.FC = () => {
 
   return (
     <>
-    <div style={{display:"flex",alignItems:"center", justifyContent:"flex-end",height:"80px",border:"2px solid white",paddingRight:"20px", marginBottom:"30px"}}>
+    <div style={{display:"flex",alignItems:"center", justifyContent:"flex-end",height:"80px",border:"2px solid white",paddingRight:"20px", marginBottom:"30px",marginInline:"24px"}}>
         <img height={40} width={40} src="https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png"/>
     </div>
     <PageContainer>
