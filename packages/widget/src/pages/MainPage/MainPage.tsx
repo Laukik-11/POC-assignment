@@ -22,6 +22,10 @@ export const MainPage: React.FC = () => {
   const showPoweredBy = !hiddenUI?.includes(HiddenUI.PoweredBy);
 
   return (
+    <>
+    <div style={{display:"flex",alignItems:"center", justifyContent:"flex-end",height:"80px",border:"2px solid white",paddingRight:"20px", marginBottom:"30px"}}>
+        <img height={40} width={40} src="https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png"/>
+    </div>
     <PageContainer>
       {/* <ActiveTransactions mt={1} mb={2} /> */}
       {/* {nft ? (
@@ -41,5 +45,6 @@ export const MainPage: React.FC = () => {
       </Box>
       {/* {showPoweredBy ? <PoweredBy /> : null} */}
     </PageContainer>
+    </>
   );
 };

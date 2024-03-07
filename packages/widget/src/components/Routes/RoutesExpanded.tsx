@@ -106,20 +106,20 @@ export const RoutesExpandedElement = () => {
       <Grow timeout={timeout.enter} in={expanded} mountOnEnter unmountOnExit>
         <Container sx={containerStyle} enableColorScheme>
           <ScrollableContainer>
-            <Header>
-              {/* <Typography fontSize={18} fontWeight="700" flex={1} noWrap>
+            {/* <Header>
+              <Typography fontSize={18} fontWeight="700" flex={1} noWrap>
                 {subvariant === 'nft'
                   ? t('main.fromAmount')
                   : t('header.youGet')}
-              </Typography> */}
-              {/* <ProgressToNextUpdate
+              </Typography>
+              <ProgressToNextUpdate
                 updatedAt={dataUpdatedAt || new Date().getTime()}
                 timeToUpdate={refetchTime}
                 isLoading={isFetching}
                 onClick={() => refetch()}
                 sx={{ marginRight: -1 }}
-              /> */}
-            </Header>
+              />
+            </Header> */}
             <PageContainer>
               <Stack direction="column" spacing={2} flex={1} paddingTop={3} paddingBottom={3}>
                 {routeNotFound ? (

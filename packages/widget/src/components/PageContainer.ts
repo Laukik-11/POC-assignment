@@ -15,7 +15,6 @@ export const PageContainer = styled(Container, {
     flex: 1,
     gap: 9,
     background:"black",
-    border: "2px solid white",
     padding: disableGutters
       ? 0
       : theme.spacing(

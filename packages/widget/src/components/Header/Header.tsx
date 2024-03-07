@@ -24,7 +24,7 @@ export const Header: FC = () => {
   return (
     <HeaderContainer>
       <WalletHeader />
-      <NavigationHeader />
+      {/* <NavigationHeader /> */}
     </HeaderContainer>
   );
 };

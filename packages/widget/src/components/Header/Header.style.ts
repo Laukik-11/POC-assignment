@@ -36,7 +36,7 @@ export const Container = styled(Box, {
   // borderRadius:"4px",
   // border: "2px solid white",
   position: sticky ? 'sticky' : 'relative',
-  marginBottom: "6rem", 
+  // marginBottom: "6rem", 
   top: 0,
   zIndex: 1200,
 }));

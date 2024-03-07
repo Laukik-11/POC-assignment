@@ -12,7 +12,7 @@ export const AppExpandedContainer = styled(Box, {
   display: 'flex',
   justifyContent: 'center',
   alignItems:"center",
-  flexDirection:"row",
+  flexDirection:"row-reverse",
   gap:"40px",
   flex: 1,
   // height: variant === 'drawer' ? 'none' : maxHeight,
@@ -51,7 +51,7 @@ const CssBaselineContainer = styled(ScopedCssBaseline, {
 
 export const FlexContainer = styled(Container)({
   display: 'flex',
-  flexDirection: 'row-reverse',
+  flexDirection: 'column',
   flex: 1,
 });
 

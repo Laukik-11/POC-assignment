@@ -29,17 +29,21 @@ export const AppDefault = () => {
   const path = cleanedPathname.substring(cleanedPathname.lastIndexOf('/') + 1);
   return (
     <>
-    {/* <Header /> */}
-    <AppExpandedContainer
-      id={createElementId(ElementId.AppExpandedContainer, elementId)}
-    >
-      {/* <div style={{display:"flex", justifyContent:"space-between",width"100%"}}> */}
-
-        {/* <Header/> */}
-      {/* </div> */}
-      <AppContainer>
+    <div style={{width:"100%", display:"flex",flexDirection:"column",justifyContent:"flex-start",alignItems:"center"}}>
+     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "90%" }}>
+          <div style={{ display: "grid", placeItems: "center" }}>
+            <img width={40} height={40} src="https://routerscan.io/assets/router_web_Rotate.svg" />
+          </div>
+          <Header />
+        </div>
+      {/* <Header /> */}
+      <AppExpandedContainer
+        id={createElementId(ElementId.AppExpandedContainer, elementId)}
+      >
+       
+        <AppContainer>
           {backButtonRoutes.includes(path) ? (
-            <IconButton size="medium" edge="start" sx={{ textAlign: "left" }} onClick={navigateBack}>
+            <IconButton size="medium"  sx={{ textAlign: "left",width:"40px" }} onClick={navigateBack}>
               <ArrowBack />
             </IconButton>
           ) : null}
@@ -47,9 +51,10 @@ export const AppDefault = () => {
             <AppRoutes />
           </FlexContainer>
           <Initializer />
-      </AppContainer>
-      {expandable ? <RoutesExpanded /> : null}
-    </AppExpandedContainer>
+        </AppContainer>
+        {expandable ? <RoutesExpanded /> : null}
+      </AppExpandedContainer>
+      </div>
     </>
   );
 };
