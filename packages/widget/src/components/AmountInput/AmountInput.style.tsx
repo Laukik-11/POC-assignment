@@ -27,7 +27,7 @@ export const FormControl = styled(MuiFormControl)(({ theme }) => ({
 export const Input = styled(InputBase)(({ theme }) => ({
   fontSize: "16px",
   fontWeight: 300,
-  fontFamily: 'Inter , sans-serif',
+  fontFamily: 'Major Mono Display, monospace',
   color:"white",
   boxShadow: 'none',
   lineHeight: 1,

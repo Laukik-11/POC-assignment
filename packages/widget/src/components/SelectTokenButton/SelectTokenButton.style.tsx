@@ -14,6 +14,7 @@ export const SelectTokenCardHeader = styled(CardHeader, {
       // textOverflow: 'ellipsis',
       whiteSpace: 'nowrap',
       overflow: 'hidden',
+      fontFamily: 'Major Mono Display, monospace',
       // width: compact ? 96 : 256,
       fontSize: compact && !selected ? "16px" : "16px",
       fontWeight: selected ? 300 : 300,

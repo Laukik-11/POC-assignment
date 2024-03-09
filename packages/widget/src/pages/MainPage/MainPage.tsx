@@ -21,7 +21,8 @@ const RelativeContainer = styled(Box, {
   lineHeight:1,
   fontSize:"32px",
   fontWeight:400,
-  fontFamily: 'Inter , sans-serif',
+  fontFamily: 'Major Mono Display, monospace'
+  // fontFamily: 'Inter , sans-serif',
 }));
 
 export const MainPage: React.FC = () => {
