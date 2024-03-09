@@ -16,6 +16,7 @@ import { backButtonRoutes } from './utils/navigationRoutes.js';
 import { ArrowBack } from '@mui/icons-material';
 import { useLocation } from 'react-router-dom';
 import { useNavigateBack } from './hooks/useNavigateBack.js';
+import { InsuraceLogo } from './icons/InsuraceLogo.js';
 
 export const AppDefault = () => {
   const { elementId } = useWidgetConfig();
@@ -32,7 +33,7 @@ export const AppDefault = () => {
     <div style={{width:"100%", display:"flex",flexDirection:"column",justifyContent:"flex-start",alignItems:"center"}}>
      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "90%" }}>
           <div style={{ display: "grid", placeItems: "center" }}>
-            <img width={40} height={40} src="https://routerscan.io/assets/router_web_Rotate.svg" />
+            <InsuraceLogo/>
           </div>
           <Header />
         </div>

@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 
-.MuiTypography-root {
-  font-family: 'Major Mono Display', monospace !important;
-}
+/* .MuiTypography-root { */
+  /* font-family: 'Major Mono Display', monospace !important; */
+/* } */
 
 @font-face {
   font-family: 'Inter';

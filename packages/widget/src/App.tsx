@@ -38,7 +38,6 @@ export const App = forwardRef<WidgetDrawer, WidgetProps>(
 
     return (
       <AppProvider config={config}>
-        {/* <Header/> */}
         <AppDefault />
       </AppProvider>
     );

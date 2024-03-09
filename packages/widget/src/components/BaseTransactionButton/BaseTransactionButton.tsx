@@ -49,7 +49,7 @@ export const BaseTransactionButton: React.FC<BaseTransactionButtonProps> = ({
         fontWeight:"300",
         lineHeight:1,
         color: 'black',
-        fontFamily: 'Major Mono Display, monospace',
+        fontFamily: 'Inter , sans-serif',
         backgroundColor: 'white',
         border: "1px solid white",
         borderRadius: "4px", // Adjust the border radius as needed
@@ -63,7 +63,7 @@ export const BaseTransactionButton: React.FC<BaseTransactionButtonProps> = ({
       loadingPosition="center"
       fullWidth
     >
-      swaP
+      SWAP
     </LoadingButton>
   );
 };

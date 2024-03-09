@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, styled } from '@mui/material';
 import { ActiveTransactions } from '../../components/ActiveTransactions/ActiveTransactions.js';
 import { AmountInput } from '../../components/AmountInput/AmountInput.js';
 import { ContractComponent } from '../../components/ContractComponent/ContractComponent.js';
@@ -15,6 +15,15 @@ import { HiddenUI } from '../../types/widget.js';
 import { MainGasMessage } from './MainGasMessage.js';
 import { ReviewButton } from './ReviewButton.js';
 
+const RelativeContainer = styled(Box, {
+  shouldForwardProp: (prop) => prop !== 'variant',
+})(() => ({
+  lineHeight:1,
+  fontSize:"32px",
+  fontWeight:400,
+  fontFamily: 'Inter , sans-serif',
+}));
+
 export const MainPage: React.FC = () => {
   const expandable = useExpandableVariant();
   const { subvariant, contractComponent, hiddenUI } = useWidgetConfig();
@@ -23,8 +32,9 @@ export const MainPage: React.FC = () => {
 
   return (
     <>
-    <div style={{display:"flex",alignItems:"center", justifyContent:"flex-end",height:"80px",border:"2px solid white",paddingRight:"20px", marginBottom:"30px",marginInline:"24px"}}>
-        <img height={40} width={40} src="https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png"/>
+    <div style={{display:"flex",background:"black",alignItems:"center", justifyContent:"flex-start",height:"80px",paddingLeft:"20px",border:"2px solid white"}}>
+        {/* <img height={40} width={40} src="https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png"/> */}
+        <RelativeContainer>BLINQR</RelativeContainer>
     </div>
     <PageContainer>
       {/* <ActiveTransactions mt={1} mb={2} /> */}

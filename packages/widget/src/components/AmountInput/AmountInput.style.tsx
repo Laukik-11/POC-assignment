@@ -27,16 +27,19 @@ export const FormControl = styled(MuiFormControl)(({ theme }) => ({
 export const Input = styled(InputBase)(({ theme }) => ({
   fontSize: "16px",
   fontWeight: 300,
+  fontFamily: 'Inter , sans-serif',
   color:"white",
   boxShadow: 'none',
   lineHeight: 1,
   [`.${inputBaseClasses.input}`]: {
-    fontSize:"14px",
+    fontSize:"16px",
+      color: "white", 
     padding: theme.spacing(0, 0, 0, 1),
     '&::placeholder': {
-      fontSize:"20px",
-      fontFamily: 'Major Mono Display, monospace',
-      color: "white", 
+      fontSize:"16px",
+      // fontFamily: 'Inter , sans-serif',
+      color: "white",
+      fontWeight: 300, 
       lineHeight: 1,
       // Replace with the desired color
     },
@@ -50,7 +53,7 @@ export const Input = styled(InputBase)(({ theme }) => ({
     MozAppearance: 'textfield',
   },
   [`&.${inputBaseClasses.disabled}`]: {
-    color: 'inherit',
+    color: 'white',
   },
   [`.${inputBaseClasses.input}.${inputBaseClasses.disabled}`]: {
     WebkitTextFillColor: 'unset',

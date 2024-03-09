@@ -73,9 +73,9 @@ export const SelectTokenButton: React.FC<
               <AvatarBadgedDefault />
             )
           }
-          title={isSelected ? token.symbol.toLowerCase() : defaultPlaceholder.toLowerCase()}
+          title={isSelected ? token.symbol : defaultPlaceholder}
           titleTypographyProps={{
-            title: isSelected ? token.symbol.toLowerCase() : defaultPlaceholder.toLowerCase(),
+            title: isSelected ? token.symbol : defaultPlaceholder,
           }}
           sx={{fontSize:"16px"}}
           // subheader={isSelected ? chain.name : null}

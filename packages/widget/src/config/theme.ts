@@ -130,7 +130,7 @@ export const createTheme = (mode: PaletteMode, theme: ThemeConfig = {}) => {
     theme.shape?.borderRadiusSecondary ?? shape.borderRadiusSecondary;
   return createMuiTheme({
     typography: {
-      fontFamily: 'Major Mono Display, monospace',
+      fontFamily: 'Inter , sans-serif',
       ...theme.typography,
     },
     palette: {
@@ -176,10 +176,10 @@ export const createTheme = (mode: PaletteMode, theme: ThemeConfig = {}) => {
       MuiScopedCssBaseline: {
         styleOverrides: {
           root: {
-            fontFamily: 'Major Mono Display, monospace',
+            fontFamily: 'Inter , sans-serif',
             ...theme.typography,
             '@supports (font-variation-settings: normal)': {
-              fontFamily: 'Major Mono Display, monospace',
+              fontFamily: 'Inter , sans-serif',
               ...theme.typography,
             },
           },

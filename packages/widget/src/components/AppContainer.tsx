@@ -11,10 +11,12 @@ export const AppExpandedContainer = styled(Box, {
 })<{ variant?: WidgetVariant }>(({ variant }) => ({
   display: 'flex',
   justifyContent: 'center',
-  alignItems:"center",
+  alignItems:"flex-start",
   flexDirection:"row-reverse",
   gap:"40px",
   flex: 1,
+  background:"black",
+  marginTop:"50px",
   // height: variant === 'drawer' ? 'none' : maxHeight,
 }));
 
@@ -27,7 +29,6 @@ const RelativeContainer = styled(Box, {
   minWidth: theme.breakpoints.values.xs,
   maxWidth: theme.breakpoints.values.sm,
   maxHeight: variant === 'drawer' ? 'none' : maxHeight,
-  background: theme.palette.background.default,
   overflow: 'auto',
   flex: 1,
   zIndex: 0,
@@ -44,8 +45,9 @@ const CssBaselineContainer = styled(ScopedCssBaseline, {
   margin: 0,
   width: '100%',
   maxHeight: variant === 'drawer' ? 'none' : maxHeight,
-  fontFamily: 'Major Mono Display, monospace',
+  fontFamily: 'Inter , sans-serif',
   overflowY: 'auto',
+  background: "black",
   height: '100%',
 }));
 
@@ -53,6 +55,8 @@ export const FlexContainer = styled(Container)({
   display: 'flex',
   flexDirection: 'column',
   flex: 1,
+  gap:"40px",
+  background: "black",
 });
 
 export const AppContainer: React.FC<PropsWithChildren<{}>> = ({ children }) => {

@@ -33,7 +33,7 @@ export function WidgetViewContainer({
   return (
     <Main open={isDrawerOpen}>
       <ExternalWalletProvider isExternalProvider={isWalletManagementExternal}>
-        <FloatingToolsContainer>
+        {/* <FloatingToolsContainer>
           {!isDrawerOpen ? (
             <Tooltip title="Open tools" arrow>
               <DrawerOpenButton onClick={() => setDrawerOpen(true)}>
@@ -47,7 +47,7 @@ export function WidgetViewContainer({
           {config?.variant === 'drawer' ? (
             <ToggleDrawerButton onClick={toggleDrawer} />
           ) : null}
-        </FloatingToolsContainer>
+        </FloatingToolsContainer> */}
         <WidgetContainer>{children}</WidgetContainer>
       </ExternalWalletProvider>
     </Main>
