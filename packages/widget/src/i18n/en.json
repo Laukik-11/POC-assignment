@@ -229,6 +229,7 @@
     "refuelStepDetails": "Get gas via {{tool}}",
     "selectChain": "Select chain",
     "selectChainAndToken": "from chain and token",
+    "selectChainAndTokens": "to chain and token",
     "selectToken": "Select token",
     "sendToAddress": "Send to {{address}}",
     "sendToWallet": "Send to a different wallet",

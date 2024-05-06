@@ -49,7 +49,7 @@ export const SelectTokenButton: React.FC<
       ? t('main.selectChain')
       : formType === 'to' && swapOnly
         ? t('main.selectToken')
-        : t('main.selectChainAndToken');
+        : formType === 'from' ? t('main.selectChainAndToken') : t('main.selectChainAndTokens');
   const cardTitle: string =
     formType === 'from' && subvariant === 'nft'
       ? t(`header.payWith`)

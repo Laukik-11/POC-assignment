@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <AppProvider>
       <Box sx={{ display: 'flex', flexGrow: '1' }}>
-        <DrawerControls />
+        {/* <DrawerControls /> */}
         <WidgetNextView />
       </Box>
     </AppProvider>

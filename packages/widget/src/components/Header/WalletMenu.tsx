@@ -36,7 +36,7 @@ export const WalletMenu = ({ onClose }: { onClose: () => void }) => {
   };
 
   return (
-    <Box>
+    <Box bgcolor="black">
       <Box display="flex" flexDirection="column">
         {accounts.map((account) => {
           const chain = getChainById(account.chainId);
@@ -48,7 +48,7 @@ export const WalletMenu = ({ onClose }: { onClose: () => void }) => {
 
           return (
             <MenuItem key={account.address}>
-              <Box flex={1} display="flex" alignItems="center">
+              <Box flex={1} display="flex" alignItems="center" >
                 {chain?.logoURI ? (
                   <Badge
                     overlap="circular"
@@ -82,12 +82,12 @@ export const WalletMenu = ({ onClose }: { onClose: () => void }) => {
                   </Avatar>
                 )}
                 {walletAddress}
-              </Box>
+              </Box>  
               <Box ml={1}>
                 <IconButton size="medium" onClick={handleCopyAddress}>
                   <ContentCopyRounded />
                 </IconButton>
-                <IconButton
+                {/* <IconButton
                   size="medium"
                   component="a"
                   onClick={onClose}
@@ -95,7 +95,7 @@ export const WalletMenu = ({ onClose }: { onClose: () => void }) => {
                   target="_blank"
                 >
                   <OpenInNewRounded />
-                </IconButton>
+                </IconButton> */}
                 {account.chainType === ChainType.EVM ? (
                   <EVMDisconnectIconButton connector={account.connector} />
                 ) : account.chainType === ChainType.SVM ? (
@@ -106,7 +106,7 @@ export const WalletMenu = ({ onClose }: { onClose: () => void }) => {
           );
         })}
       </Box>
-      {!pathname.includes(navigationRoutes.selectWallet) ? (
+      {/* {!pathname.includes(navigationRoutes.selectWallet) ? (
         <Button
           onClick={connect}
           fullWidth
@@ -119,7 +119,7 @@ export const WalletMenu = ({ onClose }: { onClose: () => void }) => {
             ? t(`button.changeWallet`)
             : t(`button.connectWallet`)}
         </Button>
-      ) : null}
+      ) : null} */}
     </Box>
   );
 };

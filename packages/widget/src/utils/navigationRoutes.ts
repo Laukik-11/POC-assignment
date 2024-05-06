@@ -20,6 +20,7 @@ export const navigationRoutes = {
   recentWallets: 'recent-wallets',
   connectedWallets: 'connected-wallets',
   configuredWallets: 'configured-wallets',
+  invite: 'invite',
 };
 
 export const navigationRoutesValues = Object.values(navigationRoutes);
@@ -46,6 +47,7 @@ export const stickyHeaderRoutes = [
 ];
 
 export const backButtonRoutes = [
+  navigationRoutes.invite,
   navigationRoutes.activeTransactions,
   navigationRoutes.bridges,
   navigationRoutes.exchanges,

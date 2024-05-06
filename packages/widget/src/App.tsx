@@ -23,7 +23,7 @@ export const App = forwardRef<WidgetDrawer, WidgetProps>(
     if (config.variant === 'drawer') {
       return (
         <AppProvider config={config}>
-          <AppDrawer
+          {/* <AppDrawer
             ref={ref}
             elementRef={elementRef}
             config={config}
@@ -31,7 +31,7 @@ export const App = forwardRef<WidgetDrawer, WidgetProps>(
             onClose={onClose}
           >
             <AppDefault />
-          </AppDrawer>
+          </AppDrawer> */}
         </AppProvider>
       );
     }

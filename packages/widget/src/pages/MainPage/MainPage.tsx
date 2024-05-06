@@ -14,6 +14,8 @@ import { useWidgetConfig } from '../../providers/WidgetProvider/WidgetProvider.j
 import { HiddenUI } from '../../types/widget.js';
 import { MainGasMessage } from './MainGasMessage.js';
 import { ReviewButton } from './ReviewButton.js';
+import { useNavigate } from 'react-router-dom';
+import { navigationRoutes } from '../../utils/navigationRoutes.js';
 
 const RelativeContainer = styled(Box, {
   shouldForwardProp: (prop) => prop !== 'variant',
@@ -30,7 +32,13 @@ export const MainPage: React.FC = () => {
   const { subvariant, contractComponent, hiddenUI } = useWidgetConfig();
   const nft = subvariant === 'nft';
   const showPoweredBy = !hiddenUI?.includes(HiddenUI.PoweredBy);
+  const navigate = useNavigate();
 
+  const handleClick = () => {
+    navigate(
+      navigationRoutes.invite
+    );
+  };
   return (
     <>
     <div style={{display:"flex",background:"black",alignItems:"center", justifyContent:"flex-start",height:"80px",paddingLeft:"20px",border:"2px solid white"}}>
