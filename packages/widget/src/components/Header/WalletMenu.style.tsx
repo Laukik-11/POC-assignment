@@ -8,10 +8,13 @@ import {
 
 export const WalletMenuContainer = styled(MuiMenu)(({ theme }) => ({
   [`& .${menuClasses.paper}`]: {
-    borderRadius: theme.shape.borderRadius,
+    background:"black",
+    border: "2px solid white",
+    borderRadius: "0px",
     color: theme.palette.text.primary,
     boxShadow: '0px 2px 4px rgb(0 0 0 / 8%), 0px 8px 16px rgb(0 0 0 / 8%)',
     padding: theme.spacing(2),
+    marginTop: theme.spacing(2),
     [`& .${menuClasses.list}`]: {
       padding: 0,
     },

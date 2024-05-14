@@ -47,7 +47,7 @@ export const WalletButton = styled(Button)(({ theme }) => ({
   padding: theme.spacing(1, 1.5),
 
   maxHeight: 48,
-  fontSize: '1.2rem',
+  fontSize: '16px',
   fontWeight: 300,
   border: "2px solid white",
   borderRadius: "4px",

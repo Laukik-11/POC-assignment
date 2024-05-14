@@ -1,7 +1,7 @@
 import { getConnectorIcon } from '@lifi/wallet-management';
 import { ExpandMore, Wallet } from '@mui/icons-material';
 import { Avatar, Badge } from '@mui/material';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
 import type { Account } from '../../hooks/useAccount.js';
@@ -22,6 +22,7 @@ import {
 } from './Header.style.js';
 import { WalletMenu } from './WalletMenu.js';
 import { WalletMenuContainer } from './WalletMenu.style.js';
+import axios from 'axios';
 
 export const WalletHeader: React.FC = () => {
   const { subvariant, hiddenUI } = useWidgetConfig();
@@ -74,6 +75,11 @@ const ConnectButton = () => {
   const { pathname } = useLocation();
   const { walletConfig, subvariant, variant } = useWidgetConfig();
   const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate(
+      navigationRoutes.invite
+    );
+  };
   const connect = async () => {
     if (walletConfig?.onConnect) {
       walletConfig.onConnect();
@@ -82,6 +88,17 @@ const ConnectButton = () => {
     navigate(navigationRoutes.selectWallet);
   };
   return (
+    <>
+    <WalletButton
+        sx={{
+          marginRight: subvariant === 'split' ? 0 : 1.25,
+          marginLeft: subvariant === 'split' ? -1 : 0,
+          fontFamily: 'Major Mono Display, monospace',
+        }}
+        onClick={handleNavigate}
+      >
+        Redeem
+      </WalletButton>
     <WalletButton
       // endIcon={
       //   variant !== 'drawer' && subvariant !== 'split' ? <Wallet /> : undefined
@@ -96,11 +113,13 @@ const ConnectButton = () => {
       }
       sx={{
         marginRight: subvariant === 'split' ? 0 : -1.25,
-        marginLeft: subvariant === 'split' ? -1.25 : 0,
+        marginLeft: subvariant === 'split' ? 1.25 : 0, 
+        fontFamily: 'Major Mono Display, monospace',
       }}
     >
       {t(`button.connectWallet`)}
     </WalletButton>
+    </>
   );
 };
 
@@ -113,15 +132,56 @@ const ConnectedButton = ({ account }: { account: Account }) => {
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate(
+      navigationRoutes.invite
+    );
+  };
 
   const handleClose = () => {
     setAnchorEl(null);
   };
 
+  const [points,setPoints] = useState(0);
+  const GetPointsForUser = async ()=>{
+  try {
+    const response = await axios.get(`http://localhost:3000/api/user/get/${account.address}`);
+    console.log("response",response)
+    if (response.data.points)
+    setPoints(response.data.points)
+  } catch (error) {
+    console.error('Error:', error);
+    }
+  }
+  useEffect(()=>{
+    GetPointsForUser();
+  }, [])
   return (
     <>
       <WalletButton
-        // endIcon={<ExpandMore />}
+        sx={{
+          marginRight: subvariant === 'split' ? 0 : 1.25,
+          marginLeft: subvariant === 'split' ? -1 : 0,
+          fontFamily: 'Major Mono Display, monospace',
+        }}
+        onClick={handleNavigate}
+      >
+        {points} Points
+      </WalletButton>
+      <WalletButton
+        sx={{
+          marginRight: subvariant === 'split' ? 0 : 1.25,
+          marginLeft: subvariant === 'split' ? -1 : 0,
+          fontFamily: 'Major Mono Display, monospace',
+        }}
+        onClick={handleNavigate}
+      >
+        Redeem
+      </WalletButton>
+      <WalletButton
+        endIcon={<ExpandMore />}
         // startIcon={
         //   chain?.logoURI ? (
         //     <Badge
@@ -157,6 +217,7 @@ const ConnectedButton = ({ account }: { account: Account }) => {
         sx={{
           marginRight: subvariant === 'split' ? 0 : -1.25,
           marginLeft: subvariant === 'split' ? -1 : 0,
+          fontFamily: 'Major Mono Display, monospace',
         }}
         onClick={handleClick}
       >

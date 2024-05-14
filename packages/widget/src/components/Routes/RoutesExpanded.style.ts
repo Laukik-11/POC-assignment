@@ -16,13 +16,14 @@ export const ScrollableContainer = styled(Box)({
 });
 
 export const Container = styled(ScopedCssBaseline)(({ theme }) => ({
-  backgroundColor: theme.palette.background.default,
+  borderRadius:"0px !important",
+  backgroundColor: "black",
   overflow: 'auto',
   width: 436,
   maxHeight,
   display: 'flex',
   flexDirection: 'column',
-  marginTop:"54px",
+  // marginTop:"54px",
 }));
 
 export const Header = styled(Box)(({ theme }) => ({

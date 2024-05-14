@@ -13,8 +13,9 @@ export const PageContainer = styled(Container, {
     display: 'flex',
     flexDirection: 'column',
     flex: 1,
-    gap: 9,
+    gap: 11,
     background:"black",
+    border : '2px solid white',
     padding: disableGutters
       ? 0
       : theme.spacing(

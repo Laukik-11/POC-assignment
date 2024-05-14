@@ -38,7 +38,7 @@ export const SelectChainAndToken: React.FC<BoxProps> = (props) => {
 
   return (
     <Box
-      sx={{ display: 'flex', flexDirection: isCompact ? 'column' : 'column',gap:'20px' }}
+      sx={{ display: 'flex', flexDirection: isCompact ? 'column' : 'column',gap:'30px' }}
       {...props}
     >
       <SelectTokenButton formType="from" compact={isCompact} />

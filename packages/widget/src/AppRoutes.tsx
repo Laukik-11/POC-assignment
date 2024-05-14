@@ -19,6 +19,7 @@ import { TransactionDetailsPage } from './pages/TransactionDetailsPage/Transacti
 import { TransactionHistoryPage } from './pages/TransactionHistoryPage/TransactionHistoryPage.js';
 import { TransactionPage } from './pages/TransactionPage/TransactionPage.js';
 import { navigationRoutes } from './utils/navigationRoutes.js';
+import Invite from './pages/Invite/Invite.js';
 
 // SelectWalletPage should be accessible from every page and this handler helps avoid creating multiple paths.
 // Avoid using it for anything else, we need to come up with a better solution once we have one more page accessible from everywhere.
