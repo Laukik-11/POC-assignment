@@ -5,8 +5,5 @@ export const CardIconButton = styled(MuiIconButton)(({ theme }) => {
   return {
     padding: theme.spacing(0.5),
     backgroundColor: getContrastAlphaColor(theme, 0.04),
-    '&:hover': {
-      backgroundColor: getContrastAlphaColor(theme, 0.08),
-    },
   };
 });

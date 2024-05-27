@@ -12,15 +12,13 @@ interface AlertSeverityProps {
 export const AlertMessageCard = styled(Box, {
   shouldForwardProp: (prop) => prop !== 'severity',
 })<AlertSeverityProps>(({ theme, severity }) => ({
-  borderRadius: theme.shape.borderRadius,
+  borderRadius: 0,
   position: 'relative',
   whiteSpace: 'pre-line',
   width: '100%',
   paddingBottom: theme.spacing(2),
-  backgroundColor:
-    severity === 'warning'
-      ? getWarningBackgroundColor(theme)
-      : getInfoBackgroundColor(theme),
+  backgroundColor: "black",
+  border:" 2px solid white",
 }));
 
 export const AlertMessageCardTitle = styled(Box, {
@@ -30,7 +28,9 @@ export const AlertMessageCardTitle = styled(Box, {
   paddingLeft: theme.spacing(2),
   paddingRight: theme.spacing(2),
   paddingTop: theme.spacing(2),
+  border: "1px soild black",
   gap: theme.spacing(1),
+  background: "black",
   color:
     severity === 'warning'
       ? theme.palette.mode === 'light'

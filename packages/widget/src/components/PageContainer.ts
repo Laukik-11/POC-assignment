@@ -12,6 +12,8 @@ export const PageContainer = styled(Container, {
   ({ theme, disableGutters, halfGutters, topBottomGutters }) => ({
     display: 'flex',
     flexDirection: 'column',
+    // height:"400px",
+    // overflowY:"hidden",
     flex: 1,
     gap: 11,
     background:"black",
@@ -19,7 +21,7 @@ export const PageContainer = styled(Container, {
     padding: disableGutters
       ? 0
       : theme.spacing(
-          topBottomGutters ? 1 : 0,
+          topBottomGutters ? 3 : 0,
           halfGutters ? 1.5 : 3,
           topBottomGutters ? 3 : 0,
           halfGutters ? 1.5 : 3,

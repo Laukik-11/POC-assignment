@@ -23,7 +23,7 @@ declare module '@mui/material/styles' {
 const initValues = {
   palette: {
     primary: {
-      main: '#5C67FF',
+      main: '#000000',
     },
     secondary: {
       main: '#F5B5FF',

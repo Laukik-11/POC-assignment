@@ -43,7 +43,7 @@ export const MainPage: React.FC = () => {
     <>
     <div style={{display:"flex",background:"black",alignItems:"center", justifyContent:"flex-start",height:"80px",paddingLeft:"20px",border:"2px solid white"}}>
         {/* <img height={40} width={40} src="https://static.debank.com/image/coin/logo_url/usdc/e87790bfe0b3f2ea855dc29069b38818.png"/> */}
-        <RelativeContainer>BLINQR</RelativeContainer>
+        <RelativeContainer>BliNqR</RelativeContainer>
     </div>
     <PageContainer>
       {/* <ActiveTransactions mt={1} mb={2} /> */}

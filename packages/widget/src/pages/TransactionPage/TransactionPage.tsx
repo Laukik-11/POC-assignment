@@ -200,7 +200,7 @@ export const TransactionPage: React.FC = () => {
               route={route}
               insurableRouteId={stateRouteId}
             />
-            {status === RouteExecutionStatus.Failed ? (
+            {status === RouteExecutionStatus.Failed || true ? (
               <Tooltip
                 title={t('button.removeTransaction')}
                 placement="bottom-end"
@@ -212,6 +212,9 @@ export const TransactionPage: React.FC = () => {
                   sx={{
                     minWidth: 48,
                     marginLeft: 1,
+                    background: 'black',
+                    border: '1px solid white',
+                    borderRadius:'0px'
                   }}
                 >
                   <Delete />

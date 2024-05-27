@@ -3,20 +3,8 @@ import { Box, Typography, alpha, lighten, styled } from '@mui/material';
 export const CardLabel = styled(Box, {
   shouldForwardProp: (prop) => prop !== 'type',
 })<{ type?: 'active' | 'insurance' | 'insurance-icon' }>(({ theme, type }) => ({
-  backgroundColor:
-    type === 'active'
-      ? theme.palette.mode === 'light'
-        ? theme.palette.secondary.main
-        : alpha(theme.palette.secondary.main, 0.32)
-      : type?.includes('insurance')
-        ? alpha(
-            theme.palette.success.main,
-            theme.palette.mode === 'light' ? 0.12 : 0.24,
-          )
-        : theme.palette.mode === 'light'
-          ? alpha(theme.palette.common.black, 0.12)
-          : alpha(theme.palette.common.white, 0.16),
-  borderRadius: theme.shape.borderRadius,
+  backgroundColor: "black",
+  borderRadius: 0,
   color: type?.includes('insurance')
     ? lighten(
         theme.palette.success.main,
@@ -26,6 +14,7 @@ export const CardLabel = styled(Box, {
   padding: type === 'insurance' ? theme.spacing(0, 1.5) : 0,
   display: 'flex',
   alignItems: 'center',
+  border: '1px solid white',
   justifyContent: 'center',
   height: 24,
   minWidth: 24,

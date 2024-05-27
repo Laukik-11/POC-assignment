@@ -43,7 +43,6 @@ export const BaseTransactionButton: React.FC<BaseTransactionButtonProps> = ({
   return (
     <LoadingButton
       variant="contained"
-      color="primary"
       sx={{
         fontSize:"32px",
         fontWeight:"300",
@@ -59,7 +58,7 @@ export const BaseTransactionButton: React.FC<BaseTransactionButtonProps> = ({
       }}
       onClick={handleClick}
       disabled={disabled}
-      loading={loading}
+      // loading={loading}
       loadingPosition="center"
       fullWidth
     >
